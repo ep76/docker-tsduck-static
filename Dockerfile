@@ -42,7 +42,7 @@ RUN \
 
 FROM scratch AS libtsduck-static
 COPY --from=libtsduck-builder /libtsduck /usr
-LABEL maintainer="https://github.com/ep76/tsduck-static"
+LABEL maintainer="https://github.com/ep76/docker-tsduck-static"
 
 # Workaround for `COPY --from` not working with `ARG`
 # (https://stackoverflow.com/a/63472135):
@@ -64,5 +64,5 @@ RUN \
 
 FROM scratch AS tsduck-static
 COPY --from=tsduck-builder /tsduck /usr
-LABEL maintainer="https://github.com/ep76/tsduck-static"
+LABEL maintainer="https://github.com/ep76/docker-tsduck-static"
 ENTRYPOINT [ "/usr/bin/tsp" ]
