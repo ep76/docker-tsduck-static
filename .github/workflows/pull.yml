@@ -1,0 +1,13 @@
+name: Pull
+
+on:
+  schedule:
+    - cron: '15 4 15 */3 *'
+  workflow_dispatch:
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    steps:
+      - run: docker pull -a ep76/tsduck-static
+      - run: docker pull -a ep76/libtsduck-static
