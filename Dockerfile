@@ -17,7 +17,7 @@ RUN \
       '*/src/tsplugins' \
       '*/src/tstools' \
       '*/src/utest' \
-      '*/build' \
+      '*/scripts' \
       '*/Makefile*' \
       && \
   echo \
