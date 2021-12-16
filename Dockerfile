@@ -1,6 +1,6 @@
 ARG libtsduck=libtsduck-static
 
-FROM alpine:3.14 AS builder
+FROM alpine:3.15 AS builder
 ARG tsduck_url=https://github.com/tsduck/tsduck/archive/refs/tags/v3.28-2551.tar.gz
 RUN \
   apk add --no-cache \
